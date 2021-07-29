@@ -399,7 +399,6 @@ GameObject:
   - component: {fileID: 829832453}
   - component: {fileID: 829832452}
   - component: {fileID: 829832451}
-  - component: {fileID: 829832456}
   - component: {fileID: 829832450}
   m_Layer: 6
   m_Name: Player
@@ -519,18 +518,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0.148}
---- !u!114 &829832456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829832449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16dfd94fda8874f4b85f3e9db7bd1d5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &865820717
 Mesh:
   m_ObjectHideFlags: 0
@@ -871,7 +858,6 @@ GameObject:
   - component: {fileID: 1449320243}
   - component: {fileID: 1449320246}
   - component: {fileID: 1449320245}
-  - component: {fileID: 1449320244}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -922,18 +908,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1449320244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449320242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d68bd2af4da7845b3d7dd2ab4be987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1449320245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,7 +1136,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1688469027}
-  - component: {fileID: 1688469026}
   - component: {fileID: 1688469025}
   - component: {fileID: 1688469024}
   - component: {fileID: 1688469023}
@@ -1236,18 +1209,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1688469026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688469022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1688469027
 Transform:
   m_ObjectHideFlags: 0
@@ -1380,7 +1341,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867424914}
-  - component: {fileID: 1867424913}
   - component: {fileID: 1867424912}
   - component: {fileID: 1867424911}
   - component: {fileID: 1867424910}
@@ -1454,18 +1414,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1867424913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867424909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1867424914
 Transform:
   m_ObjectHideFlags: 0
