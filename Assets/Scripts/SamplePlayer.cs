@@ -26,6 +26,11 @@ public class SamplePlayer : MonoBehaviour
 
     public AudioSource Footstep;
 
+    public GameObject[] questNumber;
+
+    [SerializeField]
+    public bool nonActive;
+
     /// <summary>
     /// The camera attached to the player model.
     /// Should be dragged in from Inspector.
@@ -49,13 +54,14 @@ public class SamplePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(nextState != currentState)
+        if (nextState != currentState)
         {
             SwitchState();
         }
 
         CheckRotation();
         InteractionRaycast();
+        checkUI();
     }
 
     /// <summary>
@@ -72,9 +78,9 @@ public class SamplePlayer : MonoBehaviour
 
     private IEnumerator Idle()
     {
-        while(currentState == "Idle")
+        while (currentState == "Idle")
         {
-            if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
                 nextState = "Moving";
                 Footstep.Play();
@@ -122,7 +128,7 @@ public class SamplePlayer : MonoBehaviour
 
         Vector3 movementVector = xMovement + zMovement;
 
-        if(movementVector.sqrMagnitude > 0)
+        if (movementVector.sqrMagnitude > 0)
         {
             movementVector *= moveSpeed * Time.deltaTime;
             newPos += movementVector;
@@ -157,4 +163,35 @@ public class SamplePlayer : MonoBehaviour
             }
         }
     }
+    private void checkUI()
+    {
+        for (int i = 0; i < questNumber.Length; ++i)
+        {
+            if (nonActive == true)
+            {
+                Time.timeScale = 1f;
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                nonActive = false;
+            }
+        }
+    }
+        
+        public void active()
+    {
+        nonActive = true;
+    }
+        /*for (int i = 0; i < questNumber.Length; i++)
+        {
+            if (questNumber[i].activeInHierarchy)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+        }*/
 }
