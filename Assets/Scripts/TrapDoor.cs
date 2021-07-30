@@ -28,7 +28,7 @@ public class TrapDoor : MonoBehaviour
     /// }
     /// </summary>
  
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         step = true;
         Door.SetBool("StepOn", step);
