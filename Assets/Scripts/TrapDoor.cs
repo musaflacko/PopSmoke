@@ -8,6 +8,9 @@ public class TrapDoor : MonoBehaviour
 
     private bool step = false;
 
+    /*[SerializeField]
+    private AudioSource DoorOpen;*/
+
     // Start is called before the first frame update
 
     void Start()
@@ -32,5 +35,6 @@ public class TrapDoor : MonoBehaviour
     {
         step = true;
         Door.SetBool("StepOn", step);
+        /*DoorOpen.Play();*/
     }
 }

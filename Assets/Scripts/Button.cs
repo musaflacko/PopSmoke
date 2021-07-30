@@ -23,6 +23,7 @@ public class Button : MonoBehaviour
     {
         bS.nonActive = false;
         quest.SetActive(true);
+        gameObject.SetActive(false);
     }
 
 
