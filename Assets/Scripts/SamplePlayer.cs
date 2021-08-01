@@ -149,11 +149,7 @@ public class SamplePlayer : MonoBehaviour
     {
         Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.position + playerCamera.transform.forward * interactionDistance);
 
-        /*int door = 1 << LayerMask.NameToLayer("Door");
-
-        int keydoor = 1 << LayerMask.NameToLayer("Keydoor");
-
-        int flashlight = 1 << LayerMask.NameToLayer("Flashlight");*/
+        int layermask = 1 << LayerMask.NameToLayer("Interactable");
 
         RaycastHit hitinfo;
 
@@ -161,7 +157,7 @@ public class SamplePlayer : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                /*hitinfo.transform.GetComponent<InteractableObject>().DoorAnimation();*/
+                hitinfo.transform.GetComponent<InteractableObject>().Interact();
             }
         }
     }
