@@ -26,6 +26,8 @@ public class SamplePlayer : MonoBehaviour
 
     public AudioSource Footstep;
 
+    public AudioSource questAccept;
+
     public GameObject[] questNumber;
 
     [SerializeField]
@@ -174,6 +176,7 @@ public class SamplePlayer : MonoBehaviour
             else
             {
                 Time.timeScale = 0f;
+                Footstep.Stop();
                 nonActive = false;
             }
         }
@@ -183,15 +186,9 @@ public class SamplePlayer : MonoBehaviour
     {
         nonActive = true;
     }
-        /*for (int i = 0; i < questNumber.Length; i++)
-        {
-            if (questNumber[i].activeInHierarchy)
-            {
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
-        }*/
+
+    public void play()
+    {
+        questAccept.Play();
+    }
 }
