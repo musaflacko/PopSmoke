@@ -28,6 +28,8 @@ public class SamplePlayer : MonoBehaviour
 
     public AudioSource questAccept;
 
+    public AudioSource questComplete;
+
     public GameObject[] questNumber;
 
     [SerializeField]
@@ -187,5 +189,10 @@ public class SamplePlayer : MonoBehaviour
     public void play()
     {
         questAccept.Play();
+    }
+
+    public void complete()
+    {
+        questComplete.Play();
     }
 }
