@@ -8,6 +8,9 @@ public class InteractableObject : MonoBehaviour
     public Animator myAnimator;
 
     private bool PlayerAtDoor = false;
+
+    [SerializeField]
+    private AudioSource Open;
     // Start is called before the first frame update
 
     private void Awake()
@@ -25,9 +28,10 @@ public class InteractableObject : MonoBehaviour
         
     }
 
-    public void Interact()
+    public void DoorAnimation()
     {
         PlayerAtDoor = true;
         myAnimator.SetBool("PlayerAtDoor", PlayerAtDoor);
+        Open.Play();
     }
 }
