@@ -153,6 +153,8 @@ public class SamplePlayer : MonoBehaviour
 
         int door = 1 << LayerMask.NameToLayer("Door");
 
+        int sword = 1 << LayerMask.NameToLayer("Sword");
+
 
         RaycastHit hitinfo;
 
@@ -161,6 +163,11 @@ public class SamplePlayer : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E))
             {
                 hitinfo.transform.GetComponent<InteractableObject>().DoorAnimation();
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitinfo.transform.GetComponent<EndGame>().LoadScene();
             }
         }
     }
