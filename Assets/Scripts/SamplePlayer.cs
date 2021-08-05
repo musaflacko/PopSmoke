@@ -151,25 +151,26 @@ public class SamplePlayer : MonoBehaviour
     {
         Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.position + playerCamera.transform.forward * interactionDistance);
 
+        int layermask = 1 << LayerMask.NameToLayer("Interactable");
+
         int door = 1 << LayerMask.NameToLayer("Door");
 
-        int sword = 1 << LayerMask.NameToLayer("Sword");
-
-
         RaycastHit hitinfo;
-
-        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance))
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, layermask))
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                hitinfo.transform.GetComponent<InteractableObject>().DoorAnimation();
+                hitinfo.transform.GetComponent<InteractableObject>().Interact();
             }
-
+        }
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitinfo, interactionDistance, door))
+        {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 hitinfo.transform.GetComponent<EndGame>().LoadScene();
             }
         }
+
     }
     private void checkUI()
     {

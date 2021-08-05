@@ -28,7 +28,7 @@ public class InteractableObject : MonoBehaviour
         
     }
 
-    public void DoorAnimation()
+    public void Interact()
     {
         PlayerAtDoor = true;
         myAnimator.SetBool("PlayerAtDoor", PlayerAtDoor);
