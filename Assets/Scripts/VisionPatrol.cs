@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class VisionPatrol : MonoBehaviour
 {
@@ -101,5 +102,10 @@ public class VisionPatrol : MonoBehaviour
                 nextState = "Idle";
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
